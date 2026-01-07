@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JpaBuddyIdeaProjectConfig">
+    <option name="newEntityIdStrategy" value="Identity" />
+    <option name="newEntityIdType" value="Long" />
     <option name="reLastEntityCreationPackage" value="demo/src/main/java/kabagambe/demo/entities" />
     <option name="reverseEngineeringLastDbConnectionId" value="c74a378f-988b-4c39-a83a-ea0a5df63ba5" />
   </component>
