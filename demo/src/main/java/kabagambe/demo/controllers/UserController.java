@@ -2,6 +2,8 @@ package kabagambe.demo.controllers;
 
 import kabagambe.demo.entities.User;
 import kabagambe.demo.repositories.userRepository;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -15,8 +17,18 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    public List<User> getUser(){
 
-        userRepository
+    @RequestMapping("/users")
+    public Iterable<User> getUser(){
+
+      return   userRepository.findAll();
+    }
+
+    @RequestMapping("/users/{id}")
+
+    public  User getUserById(@PathVariable Long id){
+
+        return userRepository.findById(id).orElse(null);
+
     }
 }
